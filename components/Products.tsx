@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const ProductsShowcase = [
   {
@@ -54,10 +55,13 @@ const Products = () => {
               {/* Image Section */}
               <div className="w-full md:w-1/2 group">
                 <div className="rounded-2xl overflow-hidden shadow-lg transition-all duration-300 transform group-hover:shadow-xl group-hover:shadow-purple-300/20">
-                  <img
-                    src={product.imageUrl}
-                    alt={product.product}
-                    className="w-full transition-all duration-500 ease-in-out transform group-hover:scale-105"
+                <Image
+                        src={product.imageUrl}
+                        alt={product.product}
+                        width={600}  // Add appropriate width
+                        height={400} // Add appropriate height
+                        className="w-full transition-all duration-500 ease-in-out transform group-hover:scale-105"
+                        priority={index < 2} // Optional: prioritize loading for first few images
                   />
                 </div>
               </div>
