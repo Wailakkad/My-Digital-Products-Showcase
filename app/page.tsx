@@ -1,12 +1,10 @@
-import Image from "next/image";
 import { Spotlight } from "../components/ui/spotlight-new"; // Adjust the import path as needed
-import  Products from "../components/Products"
-
+import Products from "@/components/Products";
 export default function Home() {
   return (
     <div className="relative">
      {/* Home Section */}
-<section className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-[#0a0118]">
+     <section className="relative flex flex-col items-center justify-center min-h-screen overflow-hidden bg-[#090115]">
   {/* Add the Spotlight component */}
   <Spotlight 
   />
@@ -68,7 +66,8 @@ export default function Home() {
   
   {/* Optional: Background elements or patterns */}
   <div className="absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-[#140526] to-transparent z-10"></div>
-</section>
+      </section>
+      {/*  */}
       {/* Products Section */}
       <section>
          <Products/>
